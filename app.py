@@ -114,6 +114,8 @@ if len(choice) > 0:
                           height=600, width=800)
     st.plotly_chart(fig_0)
 
+st.set_option('deprecation.showPyplotGlobalUse', False)  # To disable Warning for st.pyplot() in wordcloud
+
 st.sidebar.header("Word Cloud")
 word_sentiment = st.sidebar.radio('Display word cloud for what sentiment?', ('positive', 'neutral', 'negative'))
 if not st.sidebar.checkbox("Close", True, key='3'):
