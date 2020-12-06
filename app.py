@@ -14,6 +14,7 @@ DATA_URL = (
 
 st.title("Sentiment Analysis of Tweets about US Airlines")
 st.sidebar.title("Sentiment Analysis of Tweets")
+st.subheader("Project By: Shaleen Saini")
 st.markdown("This application is a Streamlit dashboard used "
             "to analyze sentiments of tweets 🐦")
 st.sidebar.markdown("This application is a Streamlit dashboard used "
