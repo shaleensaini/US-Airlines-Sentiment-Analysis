@@ -6,6 +6,7 @@ from plotly.subplots import make_subplots
 import plotly.graph_objects as go
 from wordcloud import WordCloud, STOPWORDS
 import matplotlib.pyplot as plt
+import os
 
 
 DATA_URL = (
