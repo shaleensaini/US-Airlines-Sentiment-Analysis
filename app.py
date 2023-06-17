@@ -85,10 +85,15 @@ def plot_sentiment(airline):
 
 
 st.sidebar.subheader("Breakdown airline by sentiment")
-choice = st.sidebar.multiselect('Pick airlines', ('US Airways','United','American','Southwest','Delta','Virgin America'))
+# choice = st.sidebar.multiselect('Pick airlines', ('US Airways','United','American','Southwest','Delta','Virgin America'))     # To avoid DuplicateWidgetID error
+# if len(choice) > 0:
+#     st.subheader("Breakdown airline by sentiment")
+#     breakdown_type = st.sidebar.selectbox('Visualization type', ['Pie chart', 'Bar plot', ], key='3')
+#     fig_3 = make_subplots(rows=1, cols=len(choice), subplot_titles=choice)
+choice = st.sidebar.multiselect('Pick airlines', ('US Airways','United','American','Southwest','Delta','Virgin America'), key='breakdown_airline_sentiment')
 if len(choice) > 0:
     st.subheader("Breakdown airline by sentiment")
-    breakdown_type = st.sidebar.selectbox('Visualization type', ['Pie chart', 'Bar plot', ], key='3')
+    breakdown_type = st.sidebar.selectbox('Visualization type', ['Pie chart', 'Bar plot', ], key='breakdown_airline_sentiment_type')
     fig_3 = make_subplots(rows=1, cols=len(choice), subplot_titles=choice)
     if breakdown_type == 'Bar plot':
         for i in range(1):
