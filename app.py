@@ -21,7 +21,7 @@ st.markdown("This application is a Streamlit dashboard used "
 st.sidebar.markdown("This application is a Streamlit dashboard used "
             "to analyze sentiments of tweets 🐦")
 
-@st.cache(persist=True)
+@st.cache_data(persist=True)
 def load_data():
     data = pd.read_csv(DATA_URL)
     data['tweet_created'] = pd.to_datetime(data['tweet_created'])
@@ -72,7 +72,7 @@ if not st.sidebar.checkbox("Close", True, key='2'):
         st.plotly_chart(fig_2)
 
 
-@st.cache(persist=True)
+@st.cache_data(persist=True)
 def plot_sentiment(airline):
     df = data[data['airline']==airline]
     count = df['airline_sentiment'].value_counts()
